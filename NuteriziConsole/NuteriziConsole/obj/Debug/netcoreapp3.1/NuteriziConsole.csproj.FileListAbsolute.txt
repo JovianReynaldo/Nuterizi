@@ -1,0 +1,13 @@
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.exe
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.deps.json
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.runtimeconfig.json
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.runtimeconfig.dev.json
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.dll
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\bin\Debug\netcoreapp3.1\NuteriziConsole.pdb
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.csprojAssemblyReference.cache
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.AssemblyInfoInputs.cache
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.AssemblyInfo.cs
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.csproj.CoreCompileInputs.cache
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.dll
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.pdb
+C:\Users\ZeroGo\source\repos\NuteriziConsole\NuteriziConsole\obj\Debug\netcoreapp3.1\NuteriziConsole.genruntimeconfig.cache
