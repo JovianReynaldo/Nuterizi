@@ -1,0 +1,55 @@
+package crc6422458fac766db769;
+
+
+public class ActivityHitungGizi
+	extends androidx.appcompat.app.AppCompatActivity
+	implements
+		mono.android.IGCUserPeer
+{
+/** @hide */
+	public static final String __md_methods;
+	static {
+		__md_methods = 
+			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
+			"";
+		mono.android.Runtime.register ("Nuterizi.ActivityHitungGizi, Nuterizi", ActivityHitungGizi.class, __md_methods);
+	}
+
+
+	public ActivityHitungGizi ()
+	{
+		super ();
+		if (getClass () == ActivityHitungGizi.class)
+			mono.android.TypeManager.Activate ("Nuterizi.ActivityHitungGizi, Nuterizi", "", this, new java.lang.Object[] {  });
+	}
+
+
+	public ActivityHitungGizi (int p0)
+	{
+		super (p0);
+		if (getClass () == ActivityHitungGizi.class)
+			mono.android.TypeManager.Activate ("Nuterizi.ActivityHitungGizi, Nuterizi", "System.Int32, mscorlib", this, new java.lang.Object[] { p0 });
+	}
+
+
+	public void onCreate (android.os.Bundle p0)
+	{
+		n_onCreate (p0);
+	}
+
+	private native void n_onCreate (android.os.Bundle p0);
+
+	private java.util.ArrayList refList;
+	public void monodroidAddReference (java.lang.Object obj)
+	{
+		if (refList == null)
+			refList = new java.util.ArrayList ();
+		refList.add (obj);
+	}
+
+	public void monodroidClearReferences ()
+	{
+		if (refList != null)
+			refList.clear ();
+	}
+}
