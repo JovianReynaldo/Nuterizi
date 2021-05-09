@@ -6,5 +6,6 @@
 	<color name="background">#ffffff</color>
 	<color name="blak">#000</color>
 	<color name="biru">#00F</color>
+	<color name="lightBlue">#d4ebf2</color>
 	<color name="abu">#f8f8f8</color>
 </resources>

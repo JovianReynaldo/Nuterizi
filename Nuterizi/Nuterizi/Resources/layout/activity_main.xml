@@ -17,7 +17,7 @@
         android:textColor="@android:color/black"
         android:textAlignment="center"/>
     <Button
-        android:id="@+id/btnKalori"
+        android:id="@+id/btnEnergi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/layout_md"
@@ -38,7 +38,7 @@
             android:id="@+id/btnHitungKebutuhanGizi"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_menu"
-            android:text="@string/Hitung"/>
+            android:text="@string/HitungKebutuhanGizi"/>
         <Button
             android:id="@+id/btnDaftarGizi"
             android:layout_width="match_parent"
@@ -50,12 +50,4 @@
             android:layout_height="@dimen/btn_menu"
             android:text="@string/Reminder"/>
     </LinearLayout>
-    <Button
-        android:id="@+id/btnFAQ"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_menu"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/FAQ"/>
 </LinearLayout>
