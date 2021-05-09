@@ -17,3 +17,5 @@ Nuterizi adalah sebuah aplikasi yang bertujuan untuk membantu penggunanya dalam 
 ### Class Diagram
 ![Class Diagram](https://user-images.githubusercontent.com/55451337/115897282-732f8880-a486-11eb-8291-8c2fdfbc4244.png)
 
+### Basis Data
+![modul5](https://user-images.githubusercontent.com/55451337/117576447-3f07c900-b110-11eb-9025-0e15a64791fb.png)
