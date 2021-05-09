@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:paddingTop="@dimen/layout_lg"
         android:paddingBottom="@dimen/layout_lg">
+
         <TextView
             android:id="@+id/tvHitung"
             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 android:id="@+id/etUmur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:textAlignment="center"
                 android:hint="@string/Tahun"
                 android:textColor="@android:color/black"/>
@@ -98,10 +98,10 @@
                 android:textColor="@android:color/black"
                 android:textAlignment="center"/>
             <EditText
-                android:id="@+id/etTinggi"
+                android:id="@+id/etTinggiBadan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:textAlignment="center"
                 android:hint="@string/Cm"
                 android:textColor="@android:color/black"/>
@@ -123,10 +123,10 @@
                 android:textColor="@android:color/black"
                 android:textAlignment="center"/>
             <EditText
-                android:id="@+id/etBerat"
+                android:id="@+id/etBeratBadan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:textAlignment="center"
                 android:hint="@string/Kg"
                 android:textColor="@android:color/black"/>
@@ -153,9 +153,9 @@
                 android:layout_height="@dimen/layout_xl"
                 android:prompt="@string/Akt"/>
         </LinearLayout>
-        <LinearLayout
+        <!--<LinearLayout
             android.id = "@+id/llHasil"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="@dimen/layout_xs"
@@ -165,22 +165,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Hasil"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_sz_large"
                 android:textColor="@android:color/black"
                 android:textAlignment="center"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="0dp"/>
-            <TextView
-                android:id="@+id/tvHasilKkal"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android.id = "@+id/llHasilHitung"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Kalori"
-                android:textSize="20dp"
-                android:textColor="@android:color/black"
-                android:textAlignment="center"
-                android:layout_marginBottom="0dp"/>
-        </LinearLayout>
-        <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/layout_xs"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvHasilHitungKkal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/undefined"
+                    android:textSize="@dimen/text_sz_large"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/tvHasilKkal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Kalori"
+                    android:textSize="@dimen/text_sz_large"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:layout_marginStart="@dimen/layout_sm"/>
+            </LinearLayout>
+        </LinearLayout>-->
+        <Button
+            android:id="@+id/btnHitungHasilKebutuhanGizi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Hitung"/>
+        <Button
+            android:id="@+id/btnRiwayat"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="Riwayat"/>
+        <!--<LinearLayout
             android.id = "@+id/llHasil"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/btn_menu_sm"
@@ -196,8 +224,8 @@
                 android:id="@+id/btnSimpan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="@dimen/layout_md"
                 android:text="@string/Simpan"/>
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
 </ScrollView>

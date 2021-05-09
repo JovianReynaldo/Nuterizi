@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llRiwayatitem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_xxl"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@android:drawable/list_selector_background"
+        android:backgroundTint="@color/lightBlue">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+     <!--       <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Kebutuhan"
+                android:textSize="@dimen/text_sz_medium"
+                android:gravity="center | left"/>-->
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Tahun"
+                android:textSize="@dimen/text_sz_medium"
+                android:gravity="center | left"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center | right"
+            android:paddingEnd="@dimen/layout_md">
+            <TextView
+                android:id="@+id/tvKebutuhanHarian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/undefined"
+                android:textSize="@dimen/text_sz_large"
+                android:gravity="right"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Kalori"
+                android:textSize="@dimen/text_sz_large"
+                android:gravity="right"
+                android:paddingStart="@dimen/layout_xs"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tooltip_corner_radius"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/layout_xs"/>
+</LinearLayout>
