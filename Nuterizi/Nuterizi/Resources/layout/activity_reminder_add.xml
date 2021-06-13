@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+	    <androidx.appcompat.widget.Toolbar
+		    android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+		    android:background="@color/colorPrimary"
+		    app:titleTextColor="@android:color/white"
+		    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="fill_parent"
+		    android:padding="@dimen/layout_lg"
+		    android:orientation="vertical">
+        <TimePicker
+            android:id="@+id/tpReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_lg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_lg"
+            android:text="Pesan: "
+            android:textSize="@dimen/text_sz_medium"/>
+        <EditText
+            android:id="@+id/etReminderMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_lg"
+            android:layout_marginEnd="@dimen/layout_lg"
+            android:inputType="textMultiLine"/>
+        <Button
+            android:id="@+id/btnReminderCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_md"
+            android:text="Create Reminder"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

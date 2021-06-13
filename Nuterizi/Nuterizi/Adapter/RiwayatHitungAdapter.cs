@@ -32,7 +32,8 @@ namespace Nuterizi.Adapter
             vh.tvTanggal.Text = riwayatGizi[position].Tanggal.ToString();
             vh.tvKebutuhanHarian.Text = riwayatGizi[position].Energi.ToString();
 
-            holder.ItemView.Click += (sender, e) => {
+            holder.ItemView.Click += (sender, e) =>
+            {
                 Intent intentHitungGizi = new Intent(holder.ItemView.Context, typeof(ActivityHitungGiziHasil));
                 intentHitungGizi.PutExtra("frekuensi", riwayatGizi[position].Frekuensi);
                 intentHitungGizi.PutExtra("energi", riwayatGizi[position].Energi);
@@ -45,10 +46,7 @@ namespace Nuterizi.Adapter
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            // Inflate the CardView for the photo:
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.activity_hitung_gizi_riwayat_item , parent, false);
-
-            // Create a ViewHolder to hold view references inside the CardView:
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.activity_hitung_gizi_riwayat_item, parent, false);
             RiwayatHitungAdapterViewHolder vh = new RiwayatHitungAdapterViewHolder(itemView);
 
             return vh;
@@ -57,8 +55,6 @@ namespace Nuterizi.Adapter
 
     class RiwayatHitungAdapterViewHolder : RecyclerView.ViewHolder
     {
-        //Your adapter views to re-use
-        //public TextView Title { get; set; }
         public TextView tvTanggal { get; set; }
         public TextView tvKebutuhanHarian { get; set; }
 
