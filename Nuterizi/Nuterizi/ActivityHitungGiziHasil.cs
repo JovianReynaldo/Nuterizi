@@ -20,6 +20,11 @@ namespace Nuterizi
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_hitung_gizi_hasil);
 
+            // set toolbar
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+
             // set data
             KebutuhanGizi hasilHitungGizi = new KebutuhanGizi();
             hasilHitungGizi.Energi = Intent.GetIntExtra("energi", 0);
@@ -43,6 +48,18 @@ namespace Nuterizi
             btnKembali.Click += (sender, e) => {
                 Finish();
             };
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }

@@ -23,20 +23,32 @@ namespace Nuterizi
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_hitung_gizi_riwayat);
 
-            // Test database
-            Log.Debug("Program", "DB start");
-            //DB.SaveRiwayatHitungGizi();
+            // set toolbar
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+
+            // get data riwayat
             List<RiwayatGizi> data = DB.GetRiwayatHitungGizi();
 
             // Create your application here
             RecyclerView rvRiwayatHitung = FindViewById<RecyclerView>(Resource.Id.rvRiwayatHitung);
-            // Instantiate the adapter and pass in its data source:
             RiwayatHitungAdapter mAdapter = new RiwayatHitungAdapter(data);
-
             LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
             rvRiwayatHitung.SetLayoutManager(mLayoutManager);
-
             rvRiwayatHitung.SetAdapter(mAdapter);
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
     }
 }

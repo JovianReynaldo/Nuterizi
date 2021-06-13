@@ -21,9 +21,14 @@ namespace Nuterizi
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_hitung_gizi);
 
+            // set toolbar
+            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+
             // Spinner Option
             Spinner spFrekuensiAktivitas = FindViewById<Spinner>(Resource.Id.spFrekuensiAktivitas);
-            var adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.Akt_array, Android.Resource.Layout.SimpleSpinnerItem);
+            ArrayAdapter adapter = ArrayAdapter.CreateFromResource(this, Resource.Array.Akt_array, Android.Resource.Layout.SimpleSpinnerItem);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spFrekuensiAktivitas.Adapter = adapter;
 
@@ -31,7 +36,8 @@ namespace Nuterizi
             Button btnHitungHasilKebutuhanGizi = FindViewById<Button>(Resource.Id.btnHitungHasilKebutuhanGizi);
             Button btnRiwayat = FindViewById<Button>(Resource.Id.btnRiwayat);
 
-            btnRiwayat.Click += (sender, e) => {
+            btnRiwayat.Click += (sender, e) =>
+            {
                 Intent intentRiwayatGizi = new Intent(this, typeof(ActivityHitungGiziRiwayat));
                 StartActivity(intentRiwayatGizi);
             };
@@ -43,17 +49,31 @@ namespace Nuterizi
             EditText etTinggiBadan = FindViewById<EditText>(Resource.Id.etTinggiBadan);
             EditText etBeratBadan = FindViewById<EditText>(Resource.Id.etBeratBadan);
 
-            btnHitungHasilKebutuhanGizi.Click += (sender, e) => {
-                DataKebutuhanGizi hitungGizi = new DataKebutuhanGizi();
-                hitungGizi.JenisKelamin = rbLaki.Checked ? "L" : (rbPerempuan.Checked ? "P" : "");
-                hitungGizi.Frekuensi = spFrekuensiAktivitas.SelectedItem.ToString();
-                if (etUmur.Text != "") hitungGizi.Umur = int.Parse(etUmur.Text);
-                if (etTinggiBadan.Text != "") hitungGizi.TinggiBadan = int.Parse(etTinggiBadan.Text);
-                if (etBeratBadan.Text != "") hitungGizi.BeratBadan = int.Parse(etBeratBadan.Text);
+            btnHitungHasilKebutuhanGizi.Click += (sender, e) =>
+            {
+                DataKebutuhanGizi hitungGizi = new DataKebutuhanGizi
+                {
+                    JenisKelamin = rbLaki.Checked ? "L" : (rbPerempuan.Checked ? "P" : ""),
+                    Frekuensi = spFrekuensiAktivitas.SelectedItem.ToString()
+                };
+                if (etUmur.Text != "")
+                {
+                    hitungGizi.Umur = int.Parse(etUmur.Text);
+                }
+
+                if (etTinggiBadan.Text != "")
+                {
+                    hitungGizi.TinggiBadan = int.Parse(etTinggiBadan.Text);
+                }
+
+                if (etBeratBadan.Text != "")
+                {
+                    hitungGizi.BeratBadan = int.Parse(etBeratBadan.Text);
+                }
 
                 if (hitungGizi.JenisKelamin != "" && etUmur.Text != "" && etTinggiBadan.Text != "" && etBeratBadan.Text != "" && spFrekuensiAktivitas.SelectedItem.ToString() != "")
                 {
-                    hitungEnergi(hitungGizi);
+                    HitungEnergi(hitungGizi);
                 } else
                 {
                     Toast.MakeText(this, "Harap lengkapi data terlebih dahulu", ToastLength.Long).Show();
@@ -61,7 +81,7 @@ namespace Nuterizi
             };
         }
 
-        private void hitungEnergi(DataKebutuhanGizi dataGizi)
+        private void HitungEnergi(DataKebutuhanGizi dataGizi)
         {
             KebutuhanGizi hasilHitungGizi = new KebutuhanGizi();
             double BMR = 0;
@@ -93,6 +113,8 @@ namespace Nuterizi
                 case "Selalu/olahraga berat":
                     total = BMR * 1.9;
                     break;
+                default:
+                    break;
             }
 
 
@@ -111,5 +133,17 @@ namespace Nuterizi
             StartActivity(intentHitungGizi);
         }
 
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
+        }
     }
 }
