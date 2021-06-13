@@ -39,3 +39,19 @@ Nuterizi adalah sebuah aplikasi yang bertujuan untuk membantu penggunanya dalam 
 9.	Setelah itu, pengguna dapat memasukkan pesan yang akan ditampilkan pada notifikasi reminder yang akan muncul nanti.
 10.	Pengguna dapat menekan tombol toggle/switch untuk menghidupkan atau mematikan reminder.
 11.	Pengguna juga menekan tombol pengaturan di atas tombol toggle/switch untuk meng-edit¬ dan menghapus reminder.
+
+
+### Screenshots
+![home](https://user-images.githubusercontent.com/55451337/121818033-07f87a80-ccaf-11eb-8e88-21c674a5c1cd.PNG)
+
+### Fitur hitung gizi
+![hitung](https://user-images.githubusercontent.com/55451337/121818037-0c249800-ccaf-11eb-8c6c-1e3c9a3b6e55.PNG)
+
+### Fitur Daftar Makanan
+![cari](https://user-images.githubusercontent.com/55451337/121818039-0f1f8880-ccaf-11eb-991a-3945d7356928.PNG)
+
+### Fitur Reminder
+![reminder](https://user-images.githubusercontent.com/55451337/121818047-13e43c80-ccaf-11eb-84bf-d0202cfe41ff.PNG)
+
+
+
